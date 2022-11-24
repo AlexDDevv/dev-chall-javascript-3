@@ -1,0 +1,216 @@
+@font-face {
+  font-family: "Manrope5";
+  src: url(../fonts/Manrope-Medium.ttf);
+}
+@font-face {
+  font-family: "Manrope7";
+  src: url(../fonts/Manrope-Bold.ttf);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: hsl(210deg, 46%, 95%);
+}
+
+li {
+  list-style-type: none;
+  cursor: pointer;
+}
+
+.container {
+  width: 50%;
+  margin: 200px auto;
+  height: 300px;
+  display: grid;
+  grid-template-columns: 39% 61%;
+  border-radius: 12px;
+  box-shadow: 0 1px 15px 2px rgba(0, 0, 0, 0.1);
+}
+@media screen and (max-width: 1285.6px) {
+  .container {
+    width: 60%;
+  }
+}
+@media screen and (max-width: 1252px) {
+  .container {
+    width: 350px;
+    height: 550px;
+    display: flex;
+    flex-direction: column;
+    margin: 80px auto;
+  }
+}
+.container .left-part {
+  background-image: url(../images/drawers.jpg);
+  background-size: cover;
+  height: 300px;
+  border-top-left-radius: 12px;
+  border-bottom-left-radius: 12px;
+}
+@media screen and (max-width: 1252px) {
+  .container .left-part {
+    height: 220px;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 12px;
+  }
+}
+.container .right-part {
+  background: white;
+  border-top-right-radius: 12px;
+  border-bottom-right-radius: 12px;
+  padding: 30px 40px;
+}
+@media screen and (max-width: 1252px) {
+  .container .right-part {
+    height: 330px;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 12px;
+    padding: 35px 35px 20px 35px;
+  }
+}
+.container .right-part .first {
+  font-family: Manrope7, sans-serif;
+  font-size: 1.3rem;
+  color: hsl(217deg, 19%, 35%);
+  margin-bottom: 20px;
+}
+@media screen and (max-width: 1252px) {
+  .container .right-part .first {
+    font-size: 1.1rem;
+  }
+}
+.container .right-part .second {
+  font-family: Manrope5, sans-serif;
+  font-size: 0.9rem;
+  color: hsl(214deg, 17%, 51%);
+  line-height: 21px;
+  margin-bottom: 30px;
+}
+@media screen and (max-width: 1252px) {
+  .container .right-part .second {
+    font-size: 0.888rem;
+    line-height: 22px;
+  }
+}
+.container .baseline {
+  display: grid;
+  grid-template-columns: 15% 75% 10%;
+}
+@media screen and (max-width: 1252px) {
+  .container .baseline {
+    grid-template-columns: 21% 69% 10%;
+  }
+}
+.container .baseline .avatar {
+  height: 40px;
+  width: 40px;
+}
+.container .baseline .avatar img {
+  width: 100%;
+  border-radius: 50px;
+}
+.container .baseline .name {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.container .baseline .name h4 {
+  font-family: Manrope7, sans-serif;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: hsl(217deg, 19%, 35%);
+}
+.container .baseline .name h5 {
+  font-family: Manrope5, sans-serif;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: hsl(212deg, 23%, 69%);
+}
+.container .baseline .share {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.container .baseline .share #arrow {
+  border-radius: 50px;
+  background: hsl(210deg, 46%, 95%);
+  padding: 8px;
+  cursor: pointer;
+  z-index: 2;
+}
+.container .baseline .share ul {
+  display: none;
+  align-items: center;
+  background: hsl(217deg, 19%, 35%);
+  padding: 10px 25px;
+  border-radius: 6px;
+  position: absolute;
+  top: -200%;
+}
+@media screen and (max-width: 1252px) {
+  .container .baseline .share ul {
+    width: 350px;
+    height: 80px;
+    top: -40%;
+    right: -125%;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+  }
+}
+.container .baseline .share ul::before {
+  content: "";
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid hsl(217deg, 19%, 35%);
+  border-bottom: 10px solid transparent;
+  position: absolute;
+  top: 125%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+@media screen and (max-width: 1252px) {
+  .container .baseline .share ul::before {
+    border: none;
+  }
+}
+.container .baseline .share ul li:first-child {
+  text-transform: uppercase;
+  font-family: Manrope5, sans-serif;
+  font-size: 0.6rem;
+  color: hsl(212deg, 23%, 69%);
+  letter-spacing: 3px;
+}
+@media screen and (max-width: 1252px) {
+  .container .baseline .share ul li:first-child {
+    font-size: 0.8rem;
+    letter-spacing: 4px;
+  }
+}
+.container .baseline .share ul li {
+  margin-right: 12px;
+}
+@media screen and (max-width: 1252px) {
+  .container .baseline .share ul li {
+    margin-right: 20px;
+  }
+}
+.container .baseline .share ul li img {
+  height: 12px;
+  width: 12px;
+}
+@media screen and (max-width: 1252px) {
+  .container .baseline .share ul li img {
+    height: 20px;
+    width: 20px;
+  }
+}
+.container .baseline .share ul li:last-child {
+  margin-right: 0;
+}/*# sourceMappingURL=index.css.map */
